@@ -1,0 +1,27 @@
+{
+  "name": "typescript-rpg-cli-game",
+  "version": "1.0.0",
+  "description": "A TypeScript RPG CLI Game",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "./node_modules/.bin/tsnd --ignore-watch node_modules --watch src/ src/index.ts",
+    "build": "./node_modules/.bin/tsc --outDir ./dist",
+    "start": "node ./dist/index.js",
+    "test": "echo \"Error: no test specified yet\" && exit 1"
+  },
+  "keywords": [
+    "TypeScript",
+    "RPG",
+    "CLI",
+    "Game"
+  ],
+  "author": "Rafael Dias <rafadias-98@hotmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "cli-ux": "^5.5.0"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^1.0.0-pre.63",
+    "typescript": "^4.0.3"
+  }
+}
