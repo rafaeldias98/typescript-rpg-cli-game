@@ -14,7 +14,7 @@ $ npm install
 $ npm run dev
 ```
 
-## :wrench: Contribuiting
+## :wrench: Contributing
 ![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)
 
 If you find any problem or have a suggestion, please [open an issue](https://github.com/rafaeldias98/typescript-rpg-cli-game/issues/new).
