@@ -1,12 +1,14 @@
 import { cli } from 'cli-ux';
-import Player from './entity/Player';
+import Goblin from './entities/characters/monsters/Goblin';
+import Warrior from './entities/characters/players/Warrior';
+import Battle from './game/battle';
 
-const wait = (ms = 400) => new Promise(resolve => setTimeout(resolve, ms))
+async function runGame() {
+  const player = new Warrior();
+  const monsters = [new Goblin(), new Goblin(), new Goblin()];
 
-async function run() {
-  const playerName = await cli.prompt('What is your name?');
-  const player = new Player(playerName);
-  cli.log(player.name);
-}
+  const battle = new Battle(player, monsters);
+  await battle.run();
+};
 
-run().catch(error => cli.error(error))
+runGame().catch(error => cli.error(error));
