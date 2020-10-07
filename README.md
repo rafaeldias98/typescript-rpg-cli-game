@@ -9,7 +9,7 @@ A RPG CLI game
 $ npm install
 ```
 
-## :construction: Start Development Server
+## :construction: Start Game [Development mode]
 ```sh
 $ npm run dev
 ```
