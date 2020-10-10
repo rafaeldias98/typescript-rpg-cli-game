@@ -1,14 +1,16 @@
 import { cli } from 'cli-ux';
 import Goblin from './entities/characters/monsters/Goblin';
-import Warrior from './entities/characters/players/Warrior';
 import Battle from './game/battle';
+import PlayerSelection from './game/playerSelection';
 
 async function runGame() {
-  const player = new Warrior();
+  const playerSelectionLayer = new PlayerSelection();
+  const player = await playerSelectionLayer.selectPlayer();
+
   const monsters = [new Goblin(), new Goblin(), new Goblin()];
 
-  const battle = new Battle(player, monsters);
-  await battle.run();
+  const battleLayer = new Battle(player, monsters);
+  await battleLayer.run();
 };
 
 runGame().catch(error => cli.error(error));
