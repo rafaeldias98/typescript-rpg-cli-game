@@ -10,7 +10,7 @@ export default class PlayerSelection {
     this.availablePlayers = [new Warrior(), new Archer()];
   }
 
-  async selectPlayer() {
+  async selectPlayer(): Promise<CharacterInterface> {
     this.showPlayersTable();
 
     const playerId = await this.getPlayerIdToUseInGame();
@@ -18,7 +18,7 @@ export default class PlayerSelection {
     return this.availablePlayers[playerId];
   }
 
-  private showPlayersTable() {
+  private showPlayersTable(): void {
     let tableIndex = 1;
     cli.table(
       this.availablePlayers,
