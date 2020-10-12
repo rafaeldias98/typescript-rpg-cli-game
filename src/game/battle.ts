@@ -10,7 +10,7 @@ export default class Battle {
     this.monsters = monsters;
   }
 
-  async run() {
+  async run(): Promise<void> {
     cli.warn(`### You will battle with ${this.monsters.length} monsters ###`);
 
     this.player.on('characterDied', () => {
